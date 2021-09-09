@@ -6,3 +6,63 @@
 html{
     font-size: 62.5%;
 }
+body{
+    display: grid;
+    height: 100vh;
+    grid-template: repeat(3, 20% auto 10%)/repeat(4,1fr);
+}
+header{
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+}
+.main{
+    grid-column: 1 /-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .img_container{
+    height: 80%;
+    width: 40%;
+}
+.main .img_container img{
+    width: 80%;
+    height: 100%;
+    object-fit: contain;
+}
+.main .text{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+}
+.main .text h2{
+    font-size: 1.8rem;
+}
+.main .text p{
+    font-size: 1.8rem;
+    word-spacing: 1.1rem;
+    color: gray;    
+}
+.main .text a{
+    display: inline-block;
+    height: 80px;
+    width: 160px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 1.8rem;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border: 2px solid blue;
+}
+footer{
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
