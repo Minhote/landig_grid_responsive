@@ -9,18 +9,21 @@ html{
 body{
     display: grid;
     height: 100vh;
-    grid-template: repeat(3, 20% auto 10%)/repeat(4,1fr);
+    grid-template: repeat(3, 10% auto 10%)/repeat(4,1fr);
 }
 header{
     grid-column: 1 / -1;
     display: flex;
     align-items: center;
+    padding:  0 40px;
+    height: 10vh;
 }
 .main{
     grid-column: 1 /-1;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 80vh;
 }
 .main .img_container{
     height: 80%;
@@ -39,7 +42,7 @@ header{
     height: 80%;
 }
 .main .text h2{
-    font-size: 1.8rem;
+    font-size: 2.2rem;
 }
 .main .text p{
     font-size: 1.8rem;
@@ -57,6 +60,7 @@ header{
     background-color: black;
     color: white;
     border: 2px solid blue;
+    border-radius: 30px;
 }
 footer{
     grid-column: 1 / -1;
@@ -65,4 +69,36 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 10vh;
+}
+
+@media screen and (max-width: 700px){
+    body{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    header{
+        height: 10vh;
+    }
+    .main{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .main .text h2{
+        font-size: 1.8rem;
+    }
+    .main .text p{
+        font-size: 1.5rem;
+    }
+    .main .text a{
+        height: 50px;
+        width: 120px;
+        line-height: 50px;
+        font-size: 1.3rem;
+    }
+    footer{
+        height: 10vh;
+    }
+    footer p{
+        font-size: 1.5rem;
+    }
 }
